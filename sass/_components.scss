@@ -1,0 +1,15 @@
+@import "./colors";
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 92%;
+}
+.special-btn {
+	align-self: center;
+	padding: 1rem 3rem;
+	border: none;
+	background-color: $primary-color;
+	border-radius: 20px;
+	color: white;
+	font-family: "Poppins", sans-serif;
+}

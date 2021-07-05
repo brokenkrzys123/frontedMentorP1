@@ -1,0 +1,438 @@
+/*font-family: 'Poppins', sans-serif;  font-family: 'Open Sans', sans-serif;*/
+@import "./mixins";
+@import "./components";
+@import "./colors";
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 18px;
+	font-family: "Open Sans", sans-serif;
+	color: $secondary-color;
+}
+.header {
+	padding: 50px 0 70px;
+	background-image: url("../images/bg-hero-mobile.svg"),
+		linear-gradient(hsl(193, 100%, 96%));
+	background-size: cover;
+	background-position: center;
+	min-height: 60vh;
+	&__logo {
+		img {
+			width: 35%;
+			max-width: 160px;
+			height: 25px;
+		}
+	}
+	&__btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0.35rem 1.75rem;
+		border: none;
+		border-radius: 20px;
+		box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+		font-weight: 700;
+		font-family: "Poppins", sans-serif;
+		font-size: 0.75rem;
+		background-color: #fff;
+	}
+	&__wrapp {
+		padding: 0 2rem;
+	}
+	&__box-text {
+		display: flex;
+		flex-direction: column;
+		margin-top: 70px;
+		&--title {
+			margin-bottom: 40px;
+			font-size: 1.3rem;
+			font-family: "Poppins", sans-serif;
+			text-align: center;
+			color: $secondary-color;
+		}
+		&--paragraph {
+			line-height: 160%;
+			text-align: center;
+			margin-bottom: 30px;
+			font-size: 0.9rem;
+		}
+	}
+	&__img {
+		margin-top: 40px;
+		width: 100%;
+		padding: 0 10px;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+.main {
+	position: relative;
+	margin-top: 120px;
+	&__item {
+		display: flex;
+		flex-direction: column;
+		margin: 20px auto 0;
+		padding: 60px 40px 30px;
+		min-height: 500px;
+		width: 90%;
+		@include border-style;
+
+		&--img {
+			img {
+				width: 100%;
+			}
+		}
+		&--text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex-grow: 2;
+
+			.item-title {
+				margin-bottom: 15px;
+				font-size: 1.35rem;
+				text-align: center;
+				color: $secondary-color;
+			}
+			.item-paragraph {
+				font-size: 0.9rem;
+				text-align: center;
+				color: hsl(208, 11%, 55%);
+			}
+		}
+	}
+	&__offer {
+		position: relative;
+		bottom: -80px;
+		left: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transform: translateX(-50%);
+		padding: 0 10px;
+		margin-top: 80px;
+		width: 90%;
+		max-width: 700px;
+		height: 150px;
+		background-color: #fff;
+
+		@include border-style;
+		&__title {
+			margin-bottom: 20px;
+			font-size: 0.9rem;
+			text-align: center;
+			color: $secondary-color;
+		}
+		&__btn {
+			padding: 0.8rem 2rem;
+			font-size: 0.7rem;
+		}
+	}
+}
+.footer {
+	min-height: 500px;
+	color: #aaa;
+	background-color: hsl(192, 100%, 9%);
+	.wrapper {
+		padding-top: 150px;
+		width: 80%;
+	}
+	.footer-logo {
+		width: 40%;
+		max-width: 220px;
+		margin-bottom: 35px;
+		img {
+			width: 100%;
+			height: 30px;
+		}
+	}
+	&__firm-info {
+		&--item {
+			display: flex;
+			span {
+				margin-right: 30px;
+				color: #fff;
+			}
+			p {
+				font-size: 0.9rem;
+			}
+			padding-bottom: 25px;
+		}
+	}
+	&__firm-subpages-of {
+		display: flex;
+		flex-direction: column;
+		font-size: 1rem;
+		a {
+			color: #ccc;
+			text-decoration: none;
+			padding: 15px 0;
+		}
+	}
+	&__links {
+		margin: 45px 0 30px;
+		display: flex;
+		justify-content: center;
+		&--border {
+			margin-right: 20px;
+			height: 40px;
+			width: 40px;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 40px;
+			a {
+				color: #fff;
+				font-size: 1.3rem;
+			}
+		}
+	}
+	.copy-rights {
+		font-size: 0.7rem;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+}
+
+//media
+@media (min-width: 768px) {
+	.header {
+		&__btn {
+			padding: 0.5rem 2rem;
+			font-size: 1rem;
+		}
+		&__box-text {
+			&--title {
+				font-size: 2.25rem;
+			}
+
+			&--btn {
+				font-size: 1rem;
+			}
+			&--paragraph {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	.main {
+		&__item {
+			&--text {
+				padding-bottom: 15px;
+				.item-title {
+					margin-top: 20px;
+					font-size: 1.85rem;
+				}
+				.item-paragraph {
+					font-size: 1.25rem;
+				}
+			}
+		}
+		&__offer {
+			height: 170px;
+			&__title {
+				margin-bottom: 20px;
+				font-size: 1.5rem;
+				text-align: center;
+				color: $secondary-color;
+			}
+			&__btn {
+				font-size: 1rem;
+				padding: 1.1rem 2.2rem;
+			}
+		}
+	}
+	.footer {
+		.footer-logo {
+			width: 30%;
+			img {
+				width: 100%;
+				height: 40px;
+			}
+		}
+		&__firm-info {
+			span {
+				font-size: 1.4rem;
+			}
+			p {
+				font-size: 1.1rem;
+			}
+		}
+		&__firm-subpages-of {
+			font-size: 1.3rem;
+		}
+		&__links {
+			&--border {
+				margin-right: 30px;
+				height: 55px;
+				width: 55px;
+				line-height: 55px;
+				a {
+					font-size: 1.9rem;
+				}
+			}
+		}
+		.copy-rights {
+			font-size: 0.9rem;
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.header {
+		&__wrapp {
+			display: flex;
+			margin-top: 80px;
+		}
+		&__btn {
+			padding: 0.65rem 2.15rem;
+			font-size: 1.25rem;
+		}
+		&__box-text {
+			align-self: center;
+			width: 45%;
+			margin-right: 20px;
+
+			&--title {
+				font-size: 2.35rem;
+				text-align: left;
+			}
+
+			&--btn {
+				align-self: flex-start;
+				font-size: 1.25rem;
+			}
+			&--paragraph {
+				text-align: left;
+				font-size: 1.45rem;
+			}
+		}
+		&__img {
+			width: 55%;
+			align-self: center;
+		}
+	}
+	.main {
+		&__item {
+			flex-direction: row;
+			margin-top: 40px;
+			width: 90%;
+			max-width: 1300px;
+			&--img {
+				order: 1;
+				width: 55%;
+			}
+			&--text {
+				width: 45%;
+				margin: 0 5% 0 5%;
+				.item-title {
+					margin-top: 20px;
+					font-size: 2rem;
+					text-align: left;
+				}
+				.item-paragraph {
+					font-size: 1.45rem;
+					text-align: left;
+				}
+			}
+			&--two {
+				.main__item--img {
+					order: 0;
+				}
+				.main__item--text {
+					margin-right: 0;
+					margin-left: 5%;
+				}
+			}
+		}
+		&__offer {
+			height: 200px;
+			bottom: -100px;
+			&__title {
+				font-size: 1.9rem;
+			}
+			&__btn {
+				font-size: 1.3rem;
+				padding: 1.4rem 2.8rem;
+			}
+		}
+	}
+	.footer {
+		&__desktop-wrapper {
+			display: flex;
+		}
+		.footer-logo {
+			img {
+				height: 50px;
+			}
+		}
+		&__firm-info {
+			width: 45%;
+			p {
+				font-size: 1.3rem;
+			}
+			span {
+				font-size: 2rem;
+			}
+		}
+		&__firm-subpages-of {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			margin: 0 6%;
+			width: 40%;
+			height: 200px;
+			font-size: 1.4rem;
+			a {
+				margin: 0 20px;
+			}
+		}
+		&__links {
+			margin: 0;
+			text-align: center;
+			&--border {
+				margin-right: 20px;
+				height: 45px;
+				width: 45px;
+				line-height: 45px;
+				a {
+					font-size: 1.7rem;
+				}
+			}
+		}
+		.copy-rights {
+			font-size: 1rem;
+			text-align: right;
+		}
+	}
+}
+@media (min-width: 1310px) {
+	.header {
+		&__logo {
+			img {
+				height: 40px;
+			}
+		}
+		&__wrapp {
+			display: flex;
+			margin: 80px auto 0;
+			max-width: 1960px;
+		}
+		&__btn {
+			padding: 0.65rem 2.15rem;
+			font-size: 1.25rem;
+		}
+		&__box-text {
+			margin-right: 80px;
+			&--title {
+				font-size: 2.75rem;
+			}
+		}
+	}
+}
